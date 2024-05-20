@@ -95,7 +95,7 @@ class RecipeCard extends HTMLElement {
 			font-size: 12px;
 		  }`
 		// A5. TODO - Append the <style> and <article> elements to the Shadow DOM
-		this.ShadowRoot.append(this.styleElement, this.articleElement);
+		this.shadowRoot.append(this.styleElement, this.articleElement);
 	}
 
 	/**
@@ -136,7 +136,9 @@ class RecipeCard extends HTMLElement {
 
 		article.innerHTML = `
 			<img src="${data.imgSrc}" alt="${data.imgAlt}">
-			<h2 class="title"><a href="${data.titleLnk}">${data.titleTxt}</a></h2>
+			<p class="title">
+			<a href="${data.titleLnk}">${data.titleTxt}</a>
+		    </p>
 			<p class="organization">${data.organization}</p>
 			<div class="rating">
 				<img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
