@@ -71,12 +71,11 @@ function saveRecipesToStorage(recipes) {
  */
 function initFormHandler() {
 	// B2. TODO - Get a reference to the <form> element
-	let form = document.getElementById('new-recipe-form');
+	let form = document.getElementById('new-recipe');
 	// B3. TODO - Add an event listener for the 'submit' event, which fires when the
 	//            submit button is clicked
-	form.addEventListener('submit', function(event){
+	form.addEventListener('submit', function(event) {
 		event.preventDefault();
-
 	
 	// Steps B4-B9 will occur inside the event listener from step B3
 	// B4. TODO - Create a new FormData object from the <form> element reference above
@@ -107,11 +106,7 @@ function initFormHandler() {
 	});
 	// B10. TODO - Get a reference to the "Clear Local Storage" button
 
-	let clearStorage = document.getElementById('clear-storage');
-	if (!clearStorage){
-		console.error('Clear storage button not found!');
-		return;
-	}
+	let clearStorage = document.querySelector('.danger');
 	// B11. TODO - Add a click event listener to clear local storage button
 	// Steps B12 & B13 will occur inside the event listener from step B11
 
